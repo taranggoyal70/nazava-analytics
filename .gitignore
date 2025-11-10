@@ -30,7 +30,17 @@ Thumbs.db
 # Data
 *.csv
 *.xlsx
+data/
+!data/.gitkeep
+
+# User data and secrets
+users.json
+dashboard/users.json
+
+# Config (keep structure, not content)
 *.json
+!package.json
+!tsconfig.json
 !requirements.txt
 
 # Logs

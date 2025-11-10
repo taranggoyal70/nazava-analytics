@@ -1,31 +1,25 @@
 #!/bin/bash
 
-echo "🚀 NAZAVA ANALYTICS - DEPLOYMENT HELPER"
+echo "========================================"
+echo "  Nazava Analytics Dashboard Startup"
 echo "========================================"
 echo ""
 
-# Check if git is initialized
-if [ ! -d ".git" ]; then
-    echo "❌ Git not initialized. Run: git init"
+# Check if Python is installed
+if ! command -v python3 &> /dev/null; then
+    echo "❌ Error: Python 3 is not installed"
+    echo "Please install Python 3.11 or higher"
     exit 1
 fi
 
-# Check if remote exists
-if ! git remote | grep -q "origin"; then
-    echo "📝 GitHub Setup Required:"
-    echo ""
-    echo "1. Create a new repository on GitHub:"
-    echo "   https://github.com/new"
-    echo ""
-    echo "2. Name it: nazava-analytics"
-    echo ""
-    echo "3. Then run:"
-    read -p "   Enter your GitHub username: " username
-    git remote add origin https://github.com/$username/nazava-analytics.git
-    echo "✅ Remote added!"
-fi
+echo "✅ Python found: $(python3 --version)"
 
-# Commit any changes
+# Check if we're in the right directory
+if [ ! -f "requirements.txt" ]; then
+    echo "❌ Error: requirements.txt not found"
+    echo "Please run this script from the shopee-analytics-platform directory"
+    exit 1
+fi
 echo ""
 echo "📦 Committing changes..."
 git add .
