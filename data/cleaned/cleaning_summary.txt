@@ -1,0 +1,12 @@
+Data Cleaning Summary
+============================================================
+
+Total files processed: 11
+Successful: 11
+Failed: 0
+
+Cleaning applied:
+- European number format conversion (1.234 → 1234)
+- Decimal separator normalization (1,5 → 1.5)
+- Whitespace removal
+- Empty row removal
