@@ -44,9 +44,11 @@ Replace `YOUR_USERNAME` with your actual GitHub username!
 5. Click **"Advanced settings"**
 6. In **"Secrets"** section, paste:
    ```toml
-   GOOGLE_CLIENT_ID = "35068771077-c4viu1me4ke4drkouldtod0nqq8n9657.apps.googleusercontent.com"
-   GOOGLE_CLIENT_SECRET = "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"
+   GOOGLE_CLIENT_ID = "YOUR_CLIENT_ID_HERE.apps.googleusercontent.com"
+   GOOGLE_CLIENT_SECRET = "YOUR_CLIENT_SECRET_HERE"
    ```
+   
+   **Get your credentials from:** https://console.cloud.google.com/apis/credentials
 
 7. Click **"Deploy!"**
 
