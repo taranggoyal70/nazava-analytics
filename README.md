@@ -14,7 +14,7 @@ Analytics dashboard built for analyzing e-commerce data from Shopee. Includes sa
 
 - Streamlit for the dashboard
 - FastAPI for backend API
-- scikit-learn and Prophet for ML models
+- scikit-learn and XG Boost for ML models
 - Plotly for charts
 
 ## How to run
