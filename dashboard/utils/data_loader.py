@@ -9,7 +9,8 @@ from pathlib import Path
 
 # Data paths - use the cleaned data we created
 CLEANED_DATA_PATH = Path("/Users/tarang/CascadeProjects/windsurf-project/shopee-analytics-platform/data/cleaned")
-ORIGINAL_DATA_PATH = Path("/Users/tarang/CascadeProjects/windsurf-project/analytical-showdown-pipeline/cleaned_data")
+# Fallback to same path if original doesn't exist
+ORIGINAL_DATA_PATH = CLEANED_DATA_PATH
 
 def get_data_path():
     """Get the appropriate data path (use cleaned if available, otherwise original)"""
