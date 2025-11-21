@@ -37,9 +37,11 @@ Follow these steps to make your dashboard accessible to anyone on the internet.
 5. Click **"Advanced settings"**
 6. Add **Secrets** (important!):
    ```toml
-   GOOGLE_CLIENT_ID = "35068771077-c4viu1me4ke4drkouldtod0nqq8n9657.apps.googleusercontent.com"
-   GOOGLE_CLIENT_SECRET = "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"
+   GOOGLE_CLIENT_ID = "YOUR_CLIENT_ID_HERE.apps.googleusercontent.com"
+   GOOGLE_CLIENT_SECRET = "YOUR_CLIENT_SECRET_HERE"
    ```
+   
+   **Get these from:** https://console.cloud.google.com/apis/credentials
 7. Click **"Deploy!"**
 
 ### **Step 3: Update Google OAuth Redirect URI**
