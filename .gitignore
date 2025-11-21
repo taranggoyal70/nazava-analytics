@@ -32,6 +32,9 @@ Thumbs.db
 *.xlsx
 data/
 !data/.gitkeep
+# Allow sample data for judges
+!data/cleaned/*.csv
+!data/sample_data_for_judges.zip
 
 # User data and secrets
 users.json
