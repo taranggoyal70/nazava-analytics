@@ -6,17 +6,28 @@ Loads cleaned data with proper formatting for all dashboard pages
 import pandas as pd
 import streamlit as st
 from pathlib import Path
+import os
 
-# Data paths - use the cleaned data we created
-CLEANED_DATA_PATH = Path("/Users/tarang/CascadeProjects/windsurf-project/shopee-analytics-platform/data/cleaned")
-# Fallback to same path if original doesn't exist
-ORIGINAL_DATA_PATH = CLEANED_DATA_PATH
+# Get the project root directory (works both locally and on Streamlit Cloud)
+DASHBOARD_DIR = Path(__file__).parent.parent
+PROJECT_ROOT = DASHBOARD_DIR.parent
 
+# Try multiple possible data paths
 def get_data_path():
     """Get the appropriate data path (use cleaned if available, otherwise original)"""
-    if CLEANED_DATA_PATH.exists():
-        return CLEANED_DATA_PATH
-    return ORIGINAL_DATA_PATH
+    possible_paths = [
+        PROJECT_ROOT / "data" / "cleaned",
+        Path("/Users/tarang/CascadeProjects/windsurf-project/analytical-showdown-pipeline/cleaned_data"),
+        PROJECT_ROOT / ".." / "analytical-showdown-pipeline" / "cleaned_data",
+        DASHBOARD_DIR / "sample_data",  # Fallback to sample data in dashboard
+    ]
+    
+    for path in possible_paths:
+        if path.exists() and any(path.glob("*.csv")):
+            return path
+    
+    # If no data found, return first path (will generate sample data)
+    return possible_paths[0]
 
 @st.cache_data
 def load_traffic_data():
