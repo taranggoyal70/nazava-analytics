@@ -1,45 +1,39 @@
-# Shopee Analytics Platform
+# Shopee Analytics Dashboard
 
-Analytics dashboard for e-commerce data with ML forecasting.
+Analytics dashboard built for analyzing e-commerce data from Shopee. Includes sales forecasting, customer insights, and campaign performance tracking.
 
-## Features
+## What it does
 
-- Real-time KPI dashboard
-- Sales forecasting
-- Customer segmentation
-- Product recommendations
-- Campaign tracking
+- Shows key metrics (sales, orders, traffic)
+- Forecasts future sales using ML
+- Segments customers based on behavior
+- Tracks marketing campaign performance
+- Recommends products
 
-## Tech Stack
+## Tech used
 
-- **Frontend**: Streamlit
-- **Backend**: FastAPI
-- **ML**: scikit-learn, Prophet
-- **Database**: PostgreSQL
+- Streamlit for the dashboard
+- FastAPI for backend API
+- scikit-learn and Prophet for ML models
+- Plotly for charts
 
-## Setup
+## How to run
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Run dashboard
 cd dashboard
 streamlit run app.py
 ```
 
-Dashboard: http://localhost:8501
+Then open http://localhost:8501
 
-## Project Structure
+## Project structure
 
 ```
-shopee-analytics-platform/
-├── dashboard/          # Streamlit dashboard
-├── backend/            # FastAPI backend
-├── ml/                 # ML models
-└── data/               # Data files
+├── dashboard/     # Main dashboard app
+├── backend/       # API server
+├── ml/            # ML models and notebooks
+└── data/          # CSV data files
 ```
 
-## License
-
-MIT
+See [SETUP.md](SETUP.md) for detailed setup instructions.
