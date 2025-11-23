@@ -1,24 +1,19 @@
-# Setup Guide
+# Setup
 
-## Requirements
-
-- Python 3.11+
-- pip
-
-## Installation
-
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Running the Dashboard
-
+Run the dashboard:
 ```bash
 cd dashboard
 streamlit run app.py
 ```
 
-Open http://localhost:8501 in your browser.
+Login: `admin` / `admin123`
+
+Data files are in `data/cleaned/` and load automatically.
 
 ## Google OAuth (Optional)
 
